@@ -1,0 +1,40 @@
+{% extends 'store/layouts/main.html' %}
+{% block content %}
+<style>
+    body {
+        background-color: lightpink;
+        font-weight: bold;
+    }
+</style>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class=" ">
+                <div class="card mt-3 shadow">
+                    <div class="card-body" style="background-color: lightblue;">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="text-center">
+                                <h4>Login Form in Django</h4>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label for="">Username:</label>
+                                <input type = "text" class = "form-control" placeholder = "Enter Username" name = "username">
+                            </div>
+                            <div class="form-group">
+                                <label for=""> Password:</label>
+                                <input type = "text" class = "form-control" placeholder = "Enter Password" name = "password">
+                            </div>
+                            <!-- Add the register button here -->
+                            <div class="form-group text-center">
+                                <button  type="submit" class="btn float-end shadow btn-success px-4" style="background-color: darkgreen; color: white;">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
